@@ -241,12 +241,6 @@ margin-left: 5px;
 }
 /* Footer End */
 /*new*/
-/* العرض الكبير (كمبيوتر) */
-.product-card {
-  flex: 1 1 calc(25% - 20px); /* 4 منتجات في الصف */
-  margin: 10px;
-  box-sizing: border-box;
-}
 
 /* العرض المتوسط (تابلت) */
 @media (max-width: 992px) {
@@ -269,5 +263,6 @@ margin-left: 5px;
     scroll-snap-align: start;
   }
 }
+
 
 
