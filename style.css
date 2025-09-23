@@ -243,4 +243,24 @@ margin-left: 5px;
 }
 /* Footer End */
 /*new*/
+/* العرض الكبير (كمبيوتر) */
+.product-card {
+  flex: 1 1 calc(25% - 20px); /* 4 منتجات في الصف */
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+/* العرض المتوسط (تابلت) */
+@media (max-width: 992px) {
+  .product-card {
+     flex: 1 1 calc(25% - 20px); /* 4 منتجات في الصف */
+  }
+}
+
+/* العرض الصغير (موبايل) */
+@media (max-width: 576px) {
+  .product-card {
+    flex: 1 1 calc(25% - 20px); /* 4 منتجات في الصف */
+  }
+}
 
