@@ -158,13 +158,12 @@ header * {
     justify-content: center;
 }
 .offers-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* مسافة بين البطاقات */
-  justify-content: center; /* توسيط العناصر */
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto; 
+ .offers-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px; /* تقليل الفجوة لتناسب الشاشات الصغيرة */
+  padding: 15px;
+}
 }
 .product-card {
   width: 250px; /* عرض ثابت للبطاقة */
@@ -244,3 +243,4 @@ margin-left: 5px;
 }
 /* Footer End */
 /*new*/
+
