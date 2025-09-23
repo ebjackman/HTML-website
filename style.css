@@ -18,9 +18,10 @@ a {
     text-decoration: none;
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
+ .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* دايمًا 4 أعمدة */
+  gap: 10px; /* مسافة بين المنتجات */
 }
 
 /* Utility Start */
@@ -158,22 +159,19 @@ header * {
     justify-content: center;
 }
 .offers-items {
- .offers-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px; /* تقليل الفجوة لتناسب الشاشات الصغيرة */
   padding: 15px;
 }
-}
+
 .product-card {
-  width: 250px; /* عرض ثابت للبطاقة */
-  border: 1px solibhd #eee; /* إطار خفيف */
-  border-radius: 8px; /* زوايا مدورة */
-  overflow: hidden; /* إخفاء المحتويات الزائدة */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* ظل خفيف */
-  transition: transform 0.3s; /* تأثير حركة */
-   background: white; /* خلفية بيضاء للبطاقة */
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
 }
+
 .product-card:hover {
   transform: translateY(-5px); /* رفع البطاقة عند التمرير */
    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* زيادة الظل عند التحويم */
@@ -258,9 +256,18 @@ margin-left: 5px;
 }
 
 /* العرض الصغير (موبايل) */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    overflow-x: auto;     /* يخلي الصف يلف يمين/يسار */
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
   .product-card {
-    flex: 1 1 calc(25% - 20px); /* 4 منتجات في الصف */
+    flex: 0 0 45%;        /* حجم كل منتج */
+    scroll-snap-align: start;
   }
 }
+
 
